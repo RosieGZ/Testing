@@ -1,6 +1,7 @@
 import pytest
 
 from portfolio import Portfolio
+from portfolio import Shares
 
 def test_buy_one_stock():
     p = Portfolio()
@@ -23,4 +24,4 @@ def test_buy_two_stocks():
 def test_not_enough_arguments_to_buy():
     p = Portfolio()
     with pytest.raises(TypeError):
-        p.buy('IBM')
+        p.buy()
